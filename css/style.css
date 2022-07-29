@@ -1,0 +1,28 @@
+.carousel-img{
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+.card{
+    display: flex;
+}
+h3{
+    margin-left: 1%;
+    
+}
+.carousel{
+    background-color: black;
+
+}
+.checked{
+    color: yellow;
+}
+.card{
+    margin: 3%;
+}
+#footer{
+    text-align: center;
+    
+}
+.social-icon{
+    margin: 1.5em;
+}
