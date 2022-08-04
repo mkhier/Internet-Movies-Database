@@ -21,8 +21,14 @@ h3{
 }
 #footer{
     text-align: center;
+    background-color: black;
+    color:white;
     
 }
 .social-icon{
     margin: 1.5em;
+}
+.d-flex{
+    padding-right: 10px;
+    
 }

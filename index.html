@@ -5,154 +5,286 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Internet Movies Database</title>
   </head>
   <body>
-    <!-- navbar -->
-    <section>
-      <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">IMDB</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#carouselExampleControls">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Movies">Movies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Series">Series</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> More </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">Top Box Office</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Top Rated Movies</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Top Rated Series</a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Sign in</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+    <!-- navbar -->    
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">IMDB</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Movies</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Comedy</a></li>
+            <li><a class="dropdown-item" href="#">Drama</a></li>
+          </ul>
+        </li> 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Series</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Comedy</a></li>
+            <li><a class="dropdown-item" href="#">Drama</a></li>
+          </ul>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Awards</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+      <a href="Login.html" class="btn btn-success">Login</a>
+    </div>
+  </div>
+</nav> 
+    <!-- Carousel -->
+    <div class="container-fluid">
+      <div class="row">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-interval="1000">
+      <div class="carousel-inner">
+        <div class="carousel-item active ">
+          <img src="img/Top Gun Mavrick.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="top Gun mavrick">
         </div>
-      </nav>
-      <!-- Carousel -->
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active ">
-            <img src="img/Top Gun Mavrick.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="top Gun mavrick">
-          </div>
-          <div class="carousel-item ">
-            <img src="img/The Batman.JPG" class="d-block img-fluid rounded  mx-auto carousel-img" alt="The Batman">
-          </div>
-          <div class="carousel-item ">
-            <img src="img/The Gray Man.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="The Gray Man">
-          </div>
-          <div class="carousel-item ">
-            <img src="img/Intersteller.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="Intersteller">
-          </div>
-          <div class="carousel-item ">
-            <img src="img/Breaking Bad.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="Breaking Bad">
-          </div>
-          <div class="carousel-item ">
-            <img src="img/Chernobyl.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="Chernobyl">
-          </div>
+        <div class="carousel-item ">
+          <img src="img/The Batman.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="The Batman">
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item ">
+          <img src="img/The Gray Man.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="The Gray Man">
+        </div>
+        <div class="carousel-item ">
+          <img src="img/Intersteller.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="Intersteller">
+        </div>
+        <div class="carousel-item ">
+          <img src="img/Breaking Bad.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="Breaking Bad">
+        </div>
+        <div class="carousel-item ">
+          <img src="img/Chernobyl.JPG" class="d-block img-fluid rounded mx-auto carousel-img" alt="Chernobyl">
+        </div>
       </div>
-      </div>
-    </section>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
     <hr>
     <!-- Cards -->
-    <h3 id="Movies">Movies</h3>
-    <div class="card-group">
-      <div class="card">
-        <img src="img/GoodFellas.JPG" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="fa fa-star"></span>
-          <h5 class="card-title">GoodFellas</h5>
-          <p class="card-text">The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i> Watchlist </a>
+    <div class="row container-fluid">      
+      <h3 id="Movies">Top Picks For You </h3>      
+      <div class="card-group">
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/GoodFellas.JPG" class="card-img-top" alt="GoodFellas">
+            <div class="card-body">              
+              <h5 class="card-title">GoodFellas (1990)</h5>
+              <small class="text-muted">R 2h 25m</small>
+              <p class="card-text">The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.</p>
+              <button id="watchBtn" onclick="addWatchlist()" class="watchlist btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="img/Inception.JPG" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="fa fa-star"></span>
-          <h5 class="card-title">Inception</h5>
-          <p class="card-text">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i> Watchlist </a>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Inception.JPG" class="card-img-top" alt="Inception">
+            <div class="card-body">              
+              <h5 class="card-title">Inception (2010)</h5>
+              <small class="text-muted">PG-13 2h 28m</small>
+              <p class="card-text">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="img/the GodFather.JPG" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="fa fa-star"></span>
-          <h5 class="card-title">The Godfather</h5>
-          <p class="card-text">The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i> Watchlist </a>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/the GodFather.JPG" class="card-img-top" alt="The Godfather">
+            <div class="card-body">              
+              <h5 class="card-title">The Godfather (1972)</h5>
+              <small class="text-muted">R 2h 55m</small>
+              <p class="card-text">The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.</p>
+              <button  onclick="addWatchlist()" class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/The Shawshank Redemption.JPG" class="card-img-top" alt="The Shawshank Redemption">
+            <div class="card-body">              
+              <h5 class="card-title">The Shawshank Redemption (1994)</h5>
+              <small class="text-muted">R 2h 22m</small>
+              <p class="card-text">Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Forrest Gump.JPG" class="card-img-top" alt="Forrest Gump">
+            <div class="card-body">              
+              <h5 class="card-title">Forrest Gump (1994)</h5>
+              <small class="text-muted">PG-13 2h 22m</small>
+              <p class="card-text">The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Pulp Fiction.JPG" class="card-img-top" alt="Pulp Fiction">
+            <div class="card-body">              
+              <h5 class="card-title">Pulp Fiction (1994)</h5>
+              <small class="text-muted">R 2h 34m</small>
+              <p class="card-text">The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Joker.JPG" class="card-img-top" alt="Joker">
+            <div class="card-body">              
+              <h5 class="card-title">Joker (2019)</h5>
+              <small class="text-muted">R 2h 2m</small>
+              <p class="card-text">A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Inglourious Basterds.JPG" class="card-img-top" alt="Inglourious Basterds">
+            <div class="card-body">              
+              <h5 class="card-title">Inglourious Basterds (2009)</h5>
+              <small class="text-muted">R 2h 33m</small>
+              <p class="card-text">In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <hr>
-    <h3 id="Series">Series</h3>
-    <div class="card-group">
-      <div class="card">
-        <img src="img/stranger Things.JPG" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="fa fa-star"></span>
-          <h5 class="card-title">Stranger Things</h5>
-          <p class="card-text">When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.</p>
-          <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i> Watchlist </a>
+    <div class="row container-fluid">
+      <h3 id="Series">Series</h3>
+      <div class="card-group">
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/stranger Things.JPG" class="card-img-top" alt="Stranger Things">
+            <div class="card-body">              
+              <h5 class="card-title">Stranger Things (2016 –)</h5>
+              <small class="text-muted">TV-14 51m</small>
+              <p class="card-text">When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="img/black mirror.JPG" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="fa fa-star"></span>
-          <h5 class="card-title">Black Mirror</h5>
-          <p class="card-text">An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.</p>
-          <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i> Watchlist </a>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/black mirror.JPG" class="card-img-top" alt="Black Mirror">
+            <div class="card-body">              
+              <h5 class="card-title">Black Mirror (2011 – 2019)</h5>
+              <small class="text-muted">TV-MA 1h</small>
+              <p class="card-text">An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="img/Rick and Morty.JPG" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="fa fa-star"></span>
-          <h5 class="card-title">Rick and Morty</h5>
-          <p class="card-text">An animated series that follows the exploits of a super scientist and his not-so-bright grandson.</p>
-          <a href="#" class="btn btn-primary"><i class='fas fa-plus'></i> Watchlist </a>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Rick and Morty.JPG" class="card-img-top" alt="Rick And Morty">
+            <div class="card-body">              
+              <h5 class="card-title">Rick and Morty (2013–)</h5>
+              <small class="text-muted">TV-MA 23m</small>
+              <p class="card-text">An animated series that follows the exploits of a super scientist and his not-so-bright grandson.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Game of Thrones.JPG" class="card-img-top" alt="Game of Thrones">
+            <div class="card-body">              
+              <h5 class="card-title">Game of Thrones (2011–2019)</h5>
+              <small class="text-muted">TV-MA 57m</small>
+              <p class="card-text">Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Dexter.JPG" class="card-img-top" alt="Dexter">
+            <div class="card-body">              
+              <h5 class="card-title">Dexter (2006–2013)</h5>
+              <small class="text-muted">TV-MA 53m</small>
+              <p class="card-text">He's smart. He's lovable. He's Dexter Morgan, America's favorite serial killer, who spends his days solving crimes and nights committing them.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/The Office.JPG" class="card-img-top" alt="The Office">
+            <div class="card-body">              
+              <h5 class="card-title">The Office (2005–2013)</h5>
+              <small class="text-muted">TV-14 22m</small>
+              <p class="card-text">A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/Better Call Soul.JPG" class="card-img-top" alt="Better Call Soul">
+            <div class="card-body">              
+              <h5 class="card-title">Better Call Soul (2015–2022)</h5>
+              <small class="text-muted">TV-MA 46m</small>
+              <p class="card-text">The trials and tribulations of criminal lawyer Jimmy McGill in the time before he established his strip-mall law office in Albuquerque, New Mexico as Saul Goodman.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            <img src="img/House Of Cards.JPG" class="card-img-top" alt="House Of Cards">
+            <div class="card-body">              
+              <h5 class="card-title">House Of Cards (2013–2018)</h5>
+              <small class="text-muted">TV-MA 51m</small>
+              <p class="card-text">A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.</p>
+              <button class="btn btn-primary">
+                <i class='fas fa-plus'></i> Watchlist </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -162,13 +294,16 @@
         <i class="social-icon fab fa-facebook-f"></i>
         <i class="social-icon fab fa-twitter"></i>
         <i class="social-icon fab fa-instagram"></i>
-        <i class="social-icon fas fa-envelope"></i>
+        <i class="social-icon fas fa-envelope"></i>        
         <p>© Copyright 2022 IMDB | Almounkez Company</p>
-      </div>
+      </div>      
     </footer>
+
+    
     <!-- bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+    <script src="js/Bootstrap/bootstrap.min.js"></script>
+    <script src="js/Bootstrap/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>    
+    <script src="js/main.js"></script>
   </body>
 </html>
